@@ -179,7 +179,7 @@ void vejamCrypt::vcHexDump(unsigned char* d, char* ref, bool strPrint)
 	int lock = 0;
 	int lf = 0;
 	unsigned char* dd = d;
-	if(ref == 0) ref = "*";
+    if(ref == 0) {ref[0] = '*', ref[1] = 0;};
 	if(d == 0) return;
 
 	printf("\r\nHex Dump[%s]:\r\n",ref);
